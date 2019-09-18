@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta charset="utf-8">
+<title>Compound Interest Calculator</title>
+<!-- SEO Meta
+  ================================================== -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="distribution" content="global">
+<meta name="revisit-after" content="2 Days">
+<meta name="robots" content="ALL">
+<meta name="rating" content="8 YEARS">
+<meta name="Language" content="en-us">
+<meta http-equiv="reply-to" content="">
+<meta NAME="GOOGLEBOT" CONTENT="NOARCHIVE">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS
+  ================================================== -->
+<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/calculator.css">
+<!-- Favicons
+	================================================== -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+<!-- JS 
+    ================================================== -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/calculator.js"></script>
+    <!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+
+</head>
+
+<!-- ================================================== -->
+<body>
+  <!-- CONTAINER START -->
+<section>
+	<div class="section">
+
+      <div class="row compound-inner-box">
+        <div class="col-md-8">
+          <div class="lside">
+            <h4>Compound Interest Calculator</h4>
+            <div class="row">
+                <div class="col-xs-12">
+                  <label>Initial Deposit</label>
+                  <div class="input-group number-spinner">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default calculate" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                    </span>
+                    <input type="text" id="amount" class="form-control text-center calculate" value="5000">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default calculate" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                    </span>   
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                    <label>Contributions</label>
+                    <div class="input-group number-spinner">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default calculate" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                      </span>
+                      <input type="text" id="contribution" class="form-control text-center calculate" value="100">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default calculate" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                      </span>
+                    </div>
+                    <form>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio" checked class="calculate">Monthly
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio" class="calculate">Annually
+                        </label>
+                      </form>  
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-12">
+                      <label>Investment Time Span</label>
+                      <form action="#" class="input-group">
+                          <p class="range-field">
+                              <div class="form-range-control"><input id="duration" type="range" max="50" min="1" value="5" step="1" class="calculate"></div>
+                          </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label>Estimated Rate of Return (%)</label>
+                        <form action="#" class="input-group">
+                            <p class="range-field">
+                                <div class="form-range-control"><input id="interest" type="range" max="20" min="0" value="4" step="0.1" class="calculate"></div>
+                            </p>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <label>Compound Frequency</label>
+                          <form class="input-group">
+                              <label class="radio-inline">
+                                <input type="radio" name="optradio" class="calculate" checked>Daily
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optradio" class="calculate">Monthly
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="optradio" class="calculate">Annually
+                                </label>
+                            </form>  
+                        </div>
+                    </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="rside">
+               <!--  <img src="images/chart.png"> -->
+
+                <!-- <div id="chartContainer" style="height: 370px; width: 100;"></div> -->
+              <div class="chart-desc">
+                <div class="row">
+                <div class="col-md-7">
+                  <label>Initial Deposit</label>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input id="starting-val" type="text" class="form-control">
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-7">
+                    <label>Contributions</label>
+                  </div>
+                  <div class="col-md-5">
+                      <div class="input-group">
+                          <input id="contribution-val" type="text"  class="form-control">
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                      <label>Investment Time Spam</label>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <input id="duration-val" type="text"  class="form-control">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-7">
+                        <label>Estimated Rate of Return</label>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="input-group">
+                              <input id="final-val" type="text"  class="form-control">
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="future-balance">
+                <p>Future Balance</p>
+                <input type="text" id="future-balance" class="form-control form-rounded" placeholder="" value="$0">
+              </div>
+            </div>
+          </div>
+      </div>
+	</div>
+</section>
+<!-- CONTAINER END -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap');
+
+
+/* #Basic Styles
+================================================== */
+	body {
+		background: #FFC94E;  
+		font: 14px/21px 'Lato', sans-serif;
+		color: #000;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;line-height: 1;
+ }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+/*
+================================================== */
+a { text-decoration:none; color:#FFF; }
+a:hover { text-decoration:underline; }
+.left{ float:left;}
+.right{ float:right;}
+h4 {font-weight: 800;margin-bottom: 30px;}
+
+/*--------------------------------------------------
+			CONTAINER CSS START
+---------------------------------------------------*/
+.section{ width:1024px;margin:100px auto}
+.compound-inner-box .col-md-8,.compound-inner-box .col-md-4 {padding: 0;}
+.compound-inner-box .lside{background: #fff;padding: 30px;}
+.compound-inner-box {box-shadow:0 1px 7px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);}
+.compound-inner-box label{font-weight: 600;font-size: 15px;}
+.lside .col-xs-12 {margin-bottom: 40px;}
+.lside .input-group {margin-bottom: 15px;width: 50%;}
+
+/* Range CSS */
+.form-range-control input[type="range"] {-webkit-appearance: none;background-color: #C196C5;height: 3px;border-radius: 1px;width: 100%;}
+.form-range-control input[type="range"]::-webkit-slider-thumb {-webkit-appearance: none;width: 15px;height: 15px;background: #FFC95B;border: 2px solid #231F20;border-radius: 50%;cursor: -moz-grab;cursor: -webkit-grab; }
+
+.rside {background: #FFC95B;padding: 15px;}
+.rside .chart-desc {margin-top: 20px;}
+.rside .chart-desc .form-control {height: 25px;}
+.rside .chart-desc .row{margin-bottom: 7px;}
+.future-balance p{font-weight: 700;font-size: 16px;}
+.future-balance {text-align: center;margin: 130px 0 0;}
+.rside .future-balance .form-control {-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;width: 150px;text-align: center;margin: 0 auto;}
+.input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group, .lside .form-control, .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group  {
+    margin-right: -1px;
+    background: #ffc95b;border: 1px solid #000;
+} 
+.form-control:focus,.form-range-control input[type="range"] {box-shadow: none;outline: none;}
+/*.form-control { height: 33px; }*/
+
+/*--------------------------------------------------
+			CONTAINER CSS END
+---------------------------------------------------*/
